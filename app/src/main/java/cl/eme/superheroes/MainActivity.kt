@@ -1,7 +1,10 @@
 package cl.eme.superheroes
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.viewbinding.BuildConfig
+import timber.log.Timber
 
 /*
 [X] 1. Crear un proyecto para Kotlin y definir el nombre de la app.
@@ -30,7 +33,7 @@ import android.os.Bundle
        forma de hacerlo es usando el patrón Singleton, por ejemplo:
 
         [] CONSUMO DE API
-[] 8. Agregar Retrofit como dependencia. Para convertir JSON una alternativa es utilizar
+[X] 8. Agregar Retrofit como dependencia. Para convertir JSON una alternativa es utilizar
         Gson agregando la dependencia.
 [] 9. Crear la interfaz para consumir la API REST que tiene los superhéroes. El endpoint que
         se va a utilizar es /all.json para obtener la lista completa de superhéroes.
@@ -75,5 +78,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        initLog()
+        Timber.d("onCreate --------------")
+    }
+
+    private fun initLog() {
+        if(BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
     }
 }
