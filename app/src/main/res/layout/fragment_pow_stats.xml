@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_intelligence_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/intelligence"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_strength_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/strength"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_intelligence_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_intelligence_label" />
+
+    <TextView
+        android:id="@+id/tv_speed_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/speed"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_strength_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_strength_label" />
+
+    <TextView
+        android:id="@+id/tv_durability_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/durability"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_speed_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_speed_label" />
+
+    <TextView
+        android:id="@+id/tv_power_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/power"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_durability_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_durability_label" />
+
+    <TextView
+        android:id="@+id/tv_combat_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/combat"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_power_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_power_label" />
+
+    <ProgressBar
+        android:id="@+id/rb_combat"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/rb_power"
+        app:layout_constraintTop_toTopOf="@+id/tv_combat_label" />
+
+    <ProgressBar
+        android:id="@+id/rb_power"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/rb_durability"
+        app:layout_constraintTop_toTopOf="@+id/tv_power_label" />
+
+    <ProgressBar
+        android:id="@+id/rb_durability"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/rb_speed"
+        app:layout_constraintTop_toTopOf="@+id/tv_durability_label" />
+
+    <ProgressBar
+        android:id="@+id/rb_speed"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/rb_strength"
+        app:layout_constraintTop_toTopOf="@+id/tv_speed_label" />
+
+    <ProgressBar
+        android:id="@+id/rb_strength"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/rb_intelligence"
+        app:layout_constraintTop_toTopOf="@+id/tv_strength_label" />
+
+    <ProgressBar
+        android:id="@+id/rb_intelligence"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_intelligence_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_intelligence_label" />
+</androidx.constraintlayout.widget.ConstraintLayout>
